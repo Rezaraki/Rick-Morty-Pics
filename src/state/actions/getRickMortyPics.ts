@@ -21,38 +21,11 @@ const getRickMortyPics = createAsyncThunk('images/fetchImages', async () => {
 
   try {
     const res: IPicsQueryData = await request('https://rickandmortyapi.com/graphql', query);
-    console.log(res);
-    return res.data.characters.results;
+    return res.characters.results;
   } catch (error) {
     console.error(error);
     throw error;
   }
 });
 export default getRickMortyPics;
-// export
-// const getRickMortyPics = createAsyncThunk<
-//   { userWallets: IWalletInfo[] } | undefined,
-//   undefined,
-//   {
-//     rejectValue: IValidationErrors;
-//   }
-// >('app/rick-morty-pics', async (_, thunkAPI) => {
-//   try {
-//     let token = Cookie.get('token');
-//     if (token?.length) {
-//       const response = await axios.post(`${process.env.REACT_APP_API_ROOT}/get-user-wallets`, {
-//         token: token,
-//       });
-
-//       return {
-//         userWallets: response.data['userWallets'],
-//       };
-//     }
-//   } catch (error: any) {
-//     return thunkAPI.rejectWithValue({
-//       message: 'No an authorized user',
-//       code: error.response.status,
-//       name: 'user-wallets/fetch-wallets',
-//     });
-//   }
-// });
+ 
