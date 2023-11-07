@@ -13,18 +13,14 @@ function App() {
     dispatch(getRickMortyPics());
   }
 
-  function handelButtonClick() {}
-
   useEffect(() => {
     fetchImges();
   }, []);
 
   return (
     <div className="App pt-24">
+      {/* <Header title="header" /> */}
       <Gallery />
-      <Header title="hola" />
-      <Logo height={100} width={100} />
-      <Button onClick={handelButtonClick}>Heyo</Button>
     </div>
   );
 }

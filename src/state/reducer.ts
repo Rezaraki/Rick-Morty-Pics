@@ -1,18 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
 import getRickMortyPics from './actions/getRickMortyPics';
-import { IImageName } from 'types';
+import { IInitialState } from 'types';
 
-export interface CounterState {
-  value: number;
-  pics: {
-    count: number;
-    status: 'loading' | 'succeeded' | 'failed' | null;
-    images: IImageName[];
-  };
-}
-
-const initialState: CounterState = {
+const initialState: IInitialState = {
   value: 0,
   pics: {
     count: 0,
@@ -24,17 +14,7 @@ const initialState: CounterState = {
 const appSlice = createSlice({
   name: 'app',
   initialState,
-  reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getRickMortyPics.pending, (state) => {
@@ -53,6 +33,6 @@ const appSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = appSlice.actions;
+// export const { increment, decrement, incrementByAmount } = appSlice.actions;
 
 export default appSlice.reducer;

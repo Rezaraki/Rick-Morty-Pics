@@ -18,13 +18,14 @@ function Gallery() {
     setPage(value);
     dispatch(getRickMortyPics(value));
   }
+
   return (
     <>
       <Grid container justifyContent="center" spacing={5}>
         {status === 'loading'
           ? new Array(20).fill(null).map((_, i) => (
               <>
-                <Grid key={i} item>
+                <Grid key={'skleton' + i} item>
                   <Skeleton height="300px" width="300px" />
                   <Skeleton width="50%" />
                 </Grid>
@@ -33,13 +34,17 @@ function Gallery() {
           : status === 'succeeded' &&
             images.map((imgName, i) => (
               <Grid key={i + imgName.name} item>
-                <ImageCard imgName={imgName} />
+                <ImageCard imgName={imgName} key={imgName.name + i} />
               </Grid>
             ))}
       </Grid>
 
       <div className="flex justify-center w-full">
-        <Pagination count={pages} onChange={handleChange} />
+        {status === 'failed' ? (
+          <div>Couldn&rsquo;t fetch data.</div>
+        ) : (
+          <Pagination count={pages} onChange={handleChange} />
+        )}
       </div>
     </>
   );
