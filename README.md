@@ -15,7 +15,7 @@ git clone https://github.com/Rezaraki/Rick-Morty-Pics
 **Usage (with [degit](https://github.com/Rich-Harris/degit))**    
 You could use degit instead of cloning the whole history of the repository.
 ```bash
-degit Rezaraki/Rick-Morty-Pics your-app-name
+degit Rezaraki/Rick-Morty-Pics Rick-Morty-Pics
 ```
 2. **Navigate to the Project Directory**: Use the `cd` command to navigate to the project directory:
 
@@ -51,33 +51,6 @@ yarn test
 This command runs all the tests with Jest and React Testing Library.
  
  
-
-
-### Tech Stack - Overview
-- Vite
-- React - Typscript
-  - react-error-boundary
-- pnpm
-
----
-
-### Editor Config
-
-- vscode settings & extension recommendations
-- `.editorconfig` file
-
----
-
-### Lint and Formatting
-- Eslint & Prettier Configured
-- Lints
-  - react
-  - react hooks
-  - typescript
-  - jsx-a11y
-
-
- 
 ## Features
 
 - **Fetches Data Using GraphQL**: The application uses the `graphql-request` library to fetch data from the Rick and Morty API. It fetches character names and pictures using a GraphQL query.
@@ -94,11 +67,5 @@ This command runs all the tests with Jest and React Testing Library.
 
 - **Mocking Server Response with MSW**: The `msw` (Mock Service Worker) library is used to mock the server response in tests. This allows testing how the application handles different server responses.
 
-### Things in CRA, supported here:
-- Import SVG's directly as React Component via SVGR
-- Unit Testing via Jest & React Testing Library
-- ESLint Rules & Prettier
-- Tailwind
-- Absolute imports within `src` directory
-
- 
+## Live
+live at https://rick-morty-pics.netlify.app
