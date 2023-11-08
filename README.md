@@ -2,9 +2,6 @@
 # Rick and Morty Character Gallery
   This project is a web application that fetches character names and pictures from the Rick and Morty API using GraphQL and displays them in a grid view. The application is built with React, Redux Toolkit, Material-UI, Tailwind CSS, and tested with Jest and React Testing Library.
 
- ## Getting Started
- 
-
  
 ## Installation
 
@@ -15,7 +12,7 @@ Follow these steps to clone and install the application:
 ```bash
 git clone https://github.com/Rezaraki/Rick-Morty-Pics
 ```
-    **Usage (with [degit](https://github.com/Rich-Harris/degit))**
+**Usage (with [degit](https://github.com/Rich-Harris/degit))**    
 You could use degit instead of cloning the whole history of the repository.
 ```bash
 degit Rezaraki/Rick-Morty-Pics your-app-name
