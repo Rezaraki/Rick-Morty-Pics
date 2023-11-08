@@ -1,3 +1,5 @@
+import { IPicsQueryData } from 'types';
+
 const mockData: IPicsQueryData = {
   characters: {
     info: {

@@ -1,3 +1,5 @@
+import { IImageName } from './IImageName';
+
 export interface IInitialState {
   value: number;
   pics: {

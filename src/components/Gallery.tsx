@@ -43,7 +43,7 @@ function Gallery() {
         {status === 'failed' ? (
           <div>Couldn&rsquo;t fetch data.</div>
         ) : (
-          <Pagination count={pages} onChange={handleChange} />
+          <Pagination className="my-4" count={pages} onChange={handleChange} />
         )}
       </div>
     </>

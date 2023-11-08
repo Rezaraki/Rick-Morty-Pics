@@ -6,14 +6,14 @@ import './index.css';
 import 'tailwindcss/tailwind.css';
 
 import App from './App';
-import { store } from 'state/store';
+import { setupStore } from 'state/store';
 
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);
   root.render(
     <StrictMode>
-      <Provider store={store}>
+      <Provider store={setupStore()}>
         <App />
       </Provider>
     </StrictMode>

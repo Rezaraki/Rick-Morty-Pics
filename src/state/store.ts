@@ -5,18 +5,14 @@ const rootReducer = combineReducers({
   app: reducer,
 });
 
-const setupStore = (preloadedState?: PreloadedState<RootState>) => {
+export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
   return configureStore({
     reducer: rootReducer,
     preloadedState,
   });
 };
 
-// export const store = configureStore({
-//   reducer: {
-//     app: reducer,
-//   },
-// });
+ 
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;

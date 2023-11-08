@@ -1,8 +1,7 @@
 import { setupServer } from 'msw/node';
 import { graphql } from 'msw';
-import { fireEvent, screen, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import { IPicsQueryData } from 'types';
+import { fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom'; 
 import { renderWithProviders } from './renderWithProviders';
 import Gallery from 'components/Gallery';
 import mockData from './mockData';
